@@ -1,10 +1,13 @@
-import React from 'react'
-
-export const ContadorApp = () => {
+function handleclick(value) {
+    value += 1
+    console.log(value)
+}
+export const ContadorApp = ({value}) => {
     return (
         <>
             <h1>Contador: </h1>
-            <button onClick={ function () { console.log('soy un boton')} }>
+            <p>{value}</p>
+            <button onClick={() => handleclick(value)}>
                 Soy un Boton
             </button>
         </>
